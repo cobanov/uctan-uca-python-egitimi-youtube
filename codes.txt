@@ -1,0 +1,13 @@
+python -m venv venv
+venv\Scripts\activate
+
+# CPU Installation
+pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cpu
+
+# GPU Installation
+pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+
+pip install pillow scipy matplotlib
+pip install timm==0.6.7
+
+pip freeze > requirements.txt
